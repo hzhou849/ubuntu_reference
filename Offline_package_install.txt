@@ -12,7 +12,7 @@ Required: A desktop/laptop computer with internet connection (if new package tha
 2. Inside that new folder Get make a list of the .deb files and dependencies
 enter this in terminal: 
 
-> sudo apt-get --print-uris --yes -d --reinstall install yourpackage $(apt-cache depends expect | grep "  Depends:" |  sed 's/  Depends://' | sed ':a;N;$!ba;s/\n//g') | grep ^\' | cut -d\' -f2 >downloads.list
+> sudo apt-get --print-uris --yes -d --reinstall install <yourpackage> $(apt-cache depends <your_package> | grep "  Depends:" |  sed 's/  Depends://' | sed ':a;N;$!ba;s/\n//g') | grep ^\' | cut -d\' -f2 >downloads.list
 
 3. Extract the .deb packages from the download.list generated with this command
 > wget --input-file downloads.list 
