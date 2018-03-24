@@ -1,6 +1,8 @@
 Install Ubuntu packages offline 
 
 
+**make sure you run sudo apt-get update first to have updated resources
+
 original post:
 https://stackoverflow.com/questions/13756800/how-to-download-all-dependencies-and-packages-to-directory
 

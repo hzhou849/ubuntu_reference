@@ -647,3 +647,13 @@ must use the '-v' flag and assign i=$counter in order to work properly
 			(( ++counter ))
 		done
 
+
+
+# SED cut characters
+'.' REGEX of characters representation
+'$' last charater
+'^' first character
+sed s'/.$//' - cuts the last character
+sed s'/^.//' - cuts the first character
+
+
