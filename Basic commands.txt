@@ -656,4 +656,13 @@ must use the '-v' flag and assign i=$counter in order to work properly
 sed s'/.$//' - cuts the last character
 sed s'/^.//' - cuts the first character
 
+#SED - cut all symbols out of expression
+removes all ""
+sed s'/\"//g'
+
+#SED - cut and replace character with another
+-in this case replace the ',' with a : and space
+./acquire_ups_kickoff.sh  | sed s'/\,/\: /g'
+
+
 
