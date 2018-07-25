@@ -589,7 +589,7 @@ cat text | awk -F '[- . ] '{print $2}'
 
 #how to remove symbols () [] {} etc..
 sed 's/[()]//g' 
-sed 's/[{}]//g' etc.. 
+sed 's/[{}]//g' etc..
 
 
 #string variable lenght check
@@ -664,5 +664,13 @@ sed s'/\"//g'
 -in this case replace the ',' with a : and space
 ./acquire_ups_kickoff.sh  | sed s'/\,/\: /g'
 
+# SED - remove all words that contain ':' char
+sed s'/[^ ]*: //g'
 
+# SED - add char ', ' at end of each line
+| sed 's/$/, /' |
+
+
+# pad with printf - padd zeros with register address 
+printf "offset: %08x: " $addr_count
 

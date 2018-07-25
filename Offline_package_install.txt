@@ -27,3 +27,5 @@ enter this in terminal:
 dpkg will sort the order of the files.
 
 Voila!
+
+sudo apt-get --print-uris --yes -d --reinstall install snmp $(apt-cache depends snmp | grep "  Depends:" |  sed 's/  Depends://' | sed ':a;N;$!ba;s/\n//g') | grep ^\' | cut -d\' -f2 >downloads.list
